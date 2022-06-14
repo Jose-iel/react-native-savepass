@@ -30,15 +30,32 @@ export function Home() {
 
   async function loadData() {
     const dataKey = '@savepass:logins';
-    // Get asyncStorage data, use setSearchListData and setData
+    const response = await AsyncStorage.getItem(dataKey);
+
+    if(response){
+      setSearchListData(JSON.parse(response));
+      setData(JSON.parse(response));
+    }
   }
 
   function handleFilterLoginData() {
-    // Filter results inside data, save with setSearchListData
+    const filteredData = searchListData.filter( data => {
+      const isValid = data.service_name.toLowerCase().includes(searchText.toLowerCase());
+      
+      if(isValid){
+        return data;
+      }
+    });
+
+    setSearchListData(filteredData);
   }
 
   function handleChangeInputText(text: string) {
-    // Update searchText value
+    if(!text){
+      setSearchListData(data);
+    }
+
+    setSearchText(text)
   }
 
   useFocusEffect(useCallback(() => {
@@ -49,8 +66,8 @@ export function Home() {
     <>
       <Header
         user={{
-          name: 'Rocketseat',
-          avatar_url: 'https://i.ibb.co/ZmFHZDM/rocketseat.jpg'
+          name: 'José',
+          avatar_url: 'https://lh3.googleusercontent.com/a-/AOh14Gg5mhaKU_vLBg0IGe-S4DBcMlNgf_XPebTINRdr3Q=s360-p-rw-no'
         }}
       />
       <Container>
