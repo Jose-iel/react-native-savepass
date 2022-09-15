@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { Alert, KeyboardAvoidingView, Platform } from 'react-native';
+import { KeyboardAvoidingView, Platform } from 'react-native';
 import { useForm } from 'react-hook-form';
 import { RFValue } from 'react-native-responsive-fontsize';
 import * as Yup from 'yup';
@@ -26,7 +26,7 @@ interface FormData {
 
 const schema = Yup.object().shape({
   service_name: Yup.string().required('Nome do serviço é obrigatório!'),
-  email: Yup.string().email('não é um email valido').required('Email é obrigatório!'),
+  email: Yup.string().required('Email ou Usuário é obrigatório!'),
   password: Yup.string().required('Senha é obrigatória!'),
 })
 

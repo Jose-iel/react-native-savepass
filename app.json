@@ -16,7 +16,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#E5E5E5"
-      }
+      },
+      "package": "com.josehenriqueiel.savepass"
     }
   },
   "name": "savepass"

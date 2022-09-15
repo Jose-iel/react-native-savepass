@@ -58,3 +58,72 @@ export const Email = styled.Text`
   font-size: ${RFValue(13)}px;
   color: #888D97;
 `;
+
+export const ButtonRemoveLogin = styled.TouchableOpacity`
+  position: absolute;
+  right: 10px;
+  width: 40px;
+`;
+
+export const TrashIcon = styled(Feather)`
+  font-size: ${RFValue(20)}px;
+  color: #888D97;
+`;
+
+export const ModalContainer = styled.View`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgba(181, 166, 162, 0.6); */
+`;
+
+export const BoxModal = styled.View`
+  width: 280px;
+  height: 220px;
+  border-radius: 20px;
+  background-color: #1967FB;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+`;
+
+export const TextTitleModal = styled.Text`
+  font-size: ${RFValue(16)}px;
+  line-height: ${RFValue(26)}px;
+  font-family: 'Rubik_300Light';
+  color: #ffffff;
+  margin-bottom: 30px;
+`;
+
+export const ButtonYesModal = styled.TouchableOpacity`
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFCC00;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+`;
+
+export const TextButtonYes = styled.Text`
+  font-size: ${RFValue(16)}px;
+  line-height: ${RFValue(26)}px;
+  font-family: 'Rubik_500Medium';
+  color: #000000;
+`;
+
+export const ButtonNoModal = styled.TouchableOpacity`
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #E83F5B;
+  padding: 5px;
+  border-radius: 5px;
+`;
+
+export const TextButtonNo = styled.Text`
+  font-size: ${RFValue(16)}px;
+  line-height: ${RFValue(26)}px;
+  font-family: 'Rubik_500Medium';
+  color: #ffff;
+`;
